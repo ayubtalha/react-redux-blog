@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class UserHeader extends React.Component {
   // componentDidMount() {
-  //   this.props.fetchUser(this.props.userId);
+  //   this.props.fetchUser(this.props.userId); // userId ---> PostList ---> post.id
   // }
 
   render() {
@@ -21,6 +21,7 @@ class UserHeader extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  // users ----> index reducers
   return { user: state.users.find((user) => user.id === ownProps.userId) };
 };
 

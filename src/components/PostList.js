@@ -7,7 +7,7 @@ import UserHeader from "./UserHeader";
 
 class PostList extends React.Component {
   componentDidMount() {
-    this.props.fetchPostsAndUsers();
+    this.props.fetchPostsAndUsers(); //action index
   }
 
   renderList() {
@@ -34,7 +34,7 @@ class PostList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { posts: state.posts };
+  return { posts: state.posts }; // from post reducers in index reducers
 };
 
 export default connect(mapStateToProps, { fetchPostsAndUsers })(PostList);
